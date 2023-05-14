@@ -13,7 +13,12 @@ class ValidatorApplicationTests {
 	}
 
 	@Test
-	void exampleFailute() {
+	void exampleFailure() {
 		assertEquals(1, 2);
+	}
+
+	@Test
+	void exampleSuccess() {
+		assertEquals(1, 1);
 	}
 }

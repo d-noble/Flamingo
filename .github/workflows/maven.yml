@@ -24,6 +24,4 @@ jobs:
         mvn -B test checkstyle:checkstyle
     - name: Archive Test Results
       if: always()
-      run: |
-        echo "# Checkstyle :rocket:" >> $GITHUB_STEP_SUMMARY
-        cat ./target/surefire-reports/*.txt >> $GITHUB_STEP_SUMMARY
+      uses: scacap/action-surefire-report@v1
