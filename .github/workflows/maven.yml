@@ -21,5 +21,6 @@ jobs:
         mvn -B package --file pom.xml
     - name: Checkstyle
       run: |
-        mvn checkstyle:checkstyle
+        mvn -B test checkstyle:checkstyle
         echo "# Checkstyle :rocket:" >> $GITHUB_STEP_SUMMARY
+        cat ./target/surefire-reports/*.txt >> $GITHUB_STEP_SUMMARY
